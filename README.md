@@ -14,7 +14,7 @@
 
 ## 📊 Executive Overview
 
-This repository represents the production **Enterprise Data Analytics, SQL Engineering, and Business Intelligence (BI) Portfolio** of **Adekunle Ola**.
+This repository represents the production **Enterprise Data Analytics, SQL Engineering, and Business Intelligence (BI) Portfolio** of **Adekunle Olanrewaju**.
 
 It documents end-to-end data pipelines, real-world supply chain and operations datasets spanning **32,245+ records across 47 sheets**, production SQL data cleaning and exploratory analysis modeled after the industry-standard curriculum of **AlexTheAnalyst**, and executive-ready **Power BI & Tableau** dashboards.
 
@@ -100,7 +100,7 @@ flowchart TD
 
 ## 👨‍💻 Author & Contact
 
-* **Lead Analyst**: Adekunle Ola
+* **Lead Analyst**: Adekunle Olanrewaju
 * **GitHub Profile**: [@Adekunle-sec](https://github.com/Adekunle-sec)
 * **LinkedIn**: [adekunle-olanrewaju-20261844b](https://www.linkedin.com/in/adekunle-olanrewaju-20261844b)
 * **Email**: [contact@anlogix.com](mailto:contact@anlogix.com)
