@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adekunle Ola | Cybersecurity & Data Analytics Portfolio</title>
+  <meta name="description" content="International-Standard Portfolio specializing in Security Operations Center (SOC), Threat Intelligence, Identity & Access Governance, Advanced Excel Modeling, SQL, Power BI, and Tableau.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-base: #0a0d14;
+      --bg-surface: #111622;
+      --bg-surface-elevated: #161d2d;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-highlight: rgba(0, 113, 227, 0.4);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-blue: #0071e3;
+      --accent-cyan: #06b6d4;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-purple: #8b5cf6;
+      --accent-red: #ef4444;
+      --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Background Glow */
+    .ambient-glow {
+      position: fixed;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.15) 0%, rgba(6, 182, 212, 0.05) 50%, transparent 80%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navigation */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      background: rgba(10, 13, 20, 0.85);
+      backdrop-filter: blur(16px);
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(0, 113, 227, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    .btn-contact {
+      background: var(--accent-blue);
+      color: #ffffff !important;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      transition: all 0.2s ease !important;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-contact:hover {
+      background: #0077ed;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 72px 0 48px;
+      text-align: center;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent-emerald);
+      font-size: 12.5px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: var(--text-secondary);
+      max-width: 780px;
+      margin: 0 auto 36px;
+      font-weight: 400;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .metric-num {
+      font-size: 28px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Tools Section */
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 64px;
+    }
+
+    .tool-group-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .tool-group-header {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-cyan);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tool-pill {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .tool-pill:hover {
+      background: rgba(255, 255, 255, 0.09);
+      color: var(--text-primary);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Filter Controls */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      font-family: var(--font-main);
+      font-size: 13.5px;
+      font-weight: 600;
+      padding: 10px 22px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      color: var(--text-primary);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .filter-btn.active {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 113, 227, 0.35);
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      position: relative;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 113, 227, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-banner {
+      padding: 24px 24px 16px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .card-category {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .cat-sec {
+      background: rgba(239, 68, 68, 0.12);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .cat-data {
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .cat-bi {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .project-stats {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      font-family: var(--font-mono);
+    }
+
+    .project-stats strong {
+      color: var(--text-primary);
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .card-link {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .card-link:hover {
+      color: #ffffff;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 48px 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">
+        <span>ADEKUNLE OLA</span>
+        <span class="brand-badge">PORTFOLIO</span>
+      </a>
+      <div class="nav-links">
+        <a href="#projects">Case Studies</a>
+        <a href="#tools">Technologies</a>
+        <a href="#excel">Excel Analytics</a>
+        <a href="https://github.com/Adekunle-sec" target="_blank">GitHub Profile</a>
+        <a href="mailto:contact@anlogix.com" class="btn-contact">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>Available for Hire • SOC Analyst & Enterprise Data Specialist</span>
+      </div>
+      <h1>Cyber Defense Operations<br>& Enterprise Data Intelligence</h1>
+      <p class="hero-subtitle">
+        Bridging the gap between 24/7 Security Operations (Sentinel, Defender XDR, KQL, Threat Hunting) and high-impact Data Analytics (32k+ record Excel modeling, SQL, Power BI, and Tableau).
+      </p>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-num" style="color: #38bdf8;">32,000+</div>
+          <div class="metric-label">Operational Records Modeled</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num" style="color: #4ade80;">94%</div>
+          <div class="metric-label">False-Positive Reduction</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num" style="color: #facc15;">&lt; 3 mins</div>
+          <div class="metric-label">Mean Time to Triage (MTTT)</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-num" style="color: #c084fc;">ISO 27001</div>
+          <div class="metric-label">Control Attestation Standards</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tools" style="padding-top: 32px;">
+      <h2 class="section-title">
+        <span>🛠️</span> Verified Technical Capabilities & Toolset
+      </h2>
+      <div class="tools-grid">
+        <div class="tool-group-card">
+          <div class="tool-group-header">
+            <span>🛡️</span> SIEM, SOAR & Detection Engineering
+          </div>
+          <div class="pill-cloud">
+            <span class="tool-pill">Microsoft Sentinel</span>
+            <span class="tool-pill">Defender XDR / EDR</span>
+            <span class="tool-pill">KQL (Kusto Query)</span>
+            <span class="tool-pill">Splunk Enterprise</span>
+            <span class="tool-pill">Azure Logic Apps</span>
+            <span class="tool-pill">Wazuh SIEM</span>
+            <span class="tool-pill">Elastic Security</span>
+          </div>
+        </div>
+
+        <div class="tool-group-card">
+          <div class="tool-group-header">
+            <span>🔑</span> Identity, Access Governance (IAM) & Systems
+          </div>
+          <div class="pill-cloud">
+            <span class="tool-pill">Microsoft Entra ID</span>
+            <span class="tool-pill">Active Directory (AD DS)</span>
+            <span class="tool-pill">Azure Arc (azcmagent)</span>
+            <span class="tool-pill">Jira Service Management</span>
+            <span class="tool-pill">RBAC & Entitlements</span>
+            <span class="tool-pill">PowerShell Automation</span>
+            <span class="tool-pill">Linux (Ubuntu / auditd)</span>
+          </div>
+        </div>
+
+        <div class="tool-group-card">
+          <div class="tool-group-header">
+            <span>📊</span> Enterprise Data Analytics & BI
+          </div>
+          <div class="pill-cloud">
+            <span class="tool-pill">Advanced Microsoft Excel</span>
+            <span class="tool-pill">Power BI (DAX / Modeling)</span>
+            <span class="tool-pill">Tableau Desktop & Public</span>
+            <span class="tool-pill">SQL / T-SQL / PostgreSQL</span>
+            <span class="tool-pill">Power Query ETL</span>
+            <span class="tool-pill">Python (Pandas / OpenPyXL)</span>
+            <span class="tool-pill">Dynamic Pivot Modeling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div style="text-align: center; margin-bottom: 28px;">
+        <h2 class="section-title" style="justify-content: center;">
+          <span>📁</span> Production Case Studies & Featured Projects
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 14px;">Filter by specialization track:</p>
+      </div>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All Projects (7)</button>
+        <button class="filter-btn" onclick="filterProjects('sec', this)">Cybersecurity & SOC (3)</button>
+        <button class="filter-btn" onclick="filterProjects('data', this)">Data Analytics & Excel (2)</button>
+        <button class="filter-btn" onclick="filterProjects('bi', this)">Power BI & Tableau (2)</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Card 1: Sentinel SOC Lab -->
+        <div class="project-card" data-category="sec">
+          <div class="card-banner">
+            <span class="card-category cat-sec">SOC / SIEM</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">Event 4624/4625</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Microsoft Sentinel & Defender XDR: Cloud SOC Triage Lab</h3>
+            <p class="project-desc">
+              Ingested hybrid Windows/Linux server logs using Azure Arc & AMA. Authored production KQL detection queries for password spraying and off-hours privilege escalations with full alert triage workflows.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> MTTT decreased from 18m to &lt; 3m; 94% false-positive reduction.
+            </div>
+            <div class="card-footer">
+              <a href="./cybersecurity/01-sentinel-defender-soc-lab/README.md" class="card-link">View Full Case Study →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Excel Operations -->
+        <div class="project-card" data-category="data">
+          <div class="card-banner">
+            <span class="card-category cat-data">Excel Analytics</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">32k+ Records</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Enterprise Operations & Supply Chain Telemetry (Excel)</h3>
+            <p class="project-desc">
+              Engineered an executive logistics modeling workbook spanning 32,245 line items and 47 sheets. Built Turnaround Time (TAT) models, 97.2% QC pass ratios, and automated inventory aging alarms using INDEX/MATCH, XLOOKUP, and SUMIFS.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> Cut turnaround backlog by 2.4 days across Southeast service hubs.
+            </div>
+            <div class="card-footer">
+              <a href="./data-analytics/01-excel-operations-analytics/README.md" class="card-link">Explore Excel Model →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: IAM RBAC Matrix -->
+        <div class="project-card" data-category="sec">
+          <div class="card-banner">
+            <span class="card-category cat-sec">IAM / GRC</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">ISO 27001 A5.18</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Enterprise Identity Governance: RBAC & JML Automation</h3>
+            <p class="project-desc">
+              Enforced zero-trust access control with strict Separation of Duties (SoD) across SOC and business roles. Automated Joiner-Mover-Leaver (JML) provisioning with multi-layered MFA and quarterly access attestation.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> 100% elimination of orphan accounts; zero audit exceptions.
+            </div>
+            <div class="card-footer">
+              <a href="./cybersecurity/02-iam-rbac-entitlement-matrix/README.md" class="card-link">View IAM Matrix →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: SQL Data Cleaning -->
+        <div class="project-card" data-category="data">
+          <div class="card-banner">
+            <span class="card-category cat-data">SQL Pipeline</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">AlexTheAnalyst Std</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Advanced SQL: Data Cleaning & Exploratory Analysis</h3>
+            <p class="project-desc">
+              End-to-end SQL production pipeline resolving NULL values via self-joins, tokenizing unformatted address strings with PARSENAME, and purging duplicate transactions using CTEs and ROW_NUMBER() window functions.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> Delivered clean, normalized reporting views ready for Power BI/Tableau.
+            </div>
+            <div class="card-footer">
+              <a href="./data-analytics/02-sql-data-cleaning-and-eda/README.md" class="card-link">View SQL Queries →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Power BI Executive Dashboard -->
+        <div class="project-card" data-category="bi">
+          <div class="card-banner">
+            <span class="card-category cat-bi">Power BI</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">Star Schema</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Executive Business Performance & Operations Dashboard</h3>
+            <p class="project-desc">
+              Architected a multi-page Power BI dashboard on a normalized Star Schema data model. Programmed 25+ DAX measures (Time Intelligence YTD, YoY Growth, 80/20 Pareto distribution) with station drill-through.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> Enabled C-suite dynamic revenue analysis and operational turnaround tracking.
+            </div>
+            <div class="card-footer">
+              <a href="./data-analytics/03-powerbi-executive-dashboard/README.md" class="card-link">View DAX & Architecture →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Threat Intel & MITRE -->
+        <div class="project-card" data-category="sec">
+          <div class="card-banner">
+            <span class="card-category cat-sec">Threat Intel</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">MITRE ATT&CK</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Cyber Threat Intelligence (CTI) & MITRE ATT&CK Detection</h3>
+            <p class="project-desc">
+              Gathered threat intelligence from AlienVault OTX, SOCRadar, and VirusTotal to profile APT29 and LockBit 3.0 campaigns. Extracted IOCs and converted them into custom KQL detection rules and Defender block indicators.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> Pre-emptive detection rule deployment ahead of active phishing campaigns.
+            </div>
+            <div class="card-footer">
+              <a href="./cybersecurity/03-threat-intel-mitre-detection/README.md" class="card-link">Explore CTI Playbook →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Tableau Storyboard -->
+        <div class="project-card" data-category="bi">
+          <div class="card-banner">
+            <span class="card-category cat-bi">Tableau</span>
+            <span style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">LOD Expressions</span>
+          </div>
+          <div class="card-body">
+            <h3 class="project-title">Tableau: Global Telemetry & Security Interactive Storyboard</h3>
+            <p class="project-desc">
+              Interactive multi-tab Tableau storyboard deploying FIXED, INCLUDE, and EXCLUDE Level of Detail (LOD) expressions. Visualized dual-axis geographic transit flows with dynamic parameter metric selectors.
+            </p>
+            <div class="project-stats">
+              <strong>Impact:</strong> Pinpointed regional logistics bottlenecks with $45,000 cost avoidance.
+            </div>
+            <div class="card-footer">
+              <a href="./data-analytics/04-tableau-telemetry-storyboard/README.md" class="card-link">View Storyboard Details →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p style="margin-bottom: 8px;"><strong>Halisans Professional Portfolio</strong> • International Standard Engineering</p>
+      <p>
+        <a href="./README.md">View Repository README</a> • 
+        <a href="https://www.linkedin.com/in/adekunle-olanrewaju-20261844b" target="_blank">LinkedIn</a> • 
+        <a href="mailto:contact@anlogix.com">contact@anlogix.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function filterProjects(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
