@@ -7,7 +7,7 @@
   <a href="https://github.com/Adekunle-sec"><img src="https://img.shields.io/badge/Author%20Profile-Adekunle--sec-24292e?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://github.com/Adekunle-sec/cybersecurity-portfolio"><img src="https://img.shields.io/badge/Cybersecurity%20Portfolio-Explore%20SOC%20%26%20IAM-38BDF8?style=for-the-badge&logo=shield&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/adekunle-olanrewaju-20261844b"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:contact@anlogix.com"><img src="https://img.shields.io/badge/Email-Direct%20Inquiry-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="mailto:tayour.ola@gmail.com"><img src="https://img.shields.io/badge/Email-Direct%20Inquiry-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 </p>
 
 ---
@@ -103,4 +103,4 @@ flowchart TD
 * **Lead Analyst**: Adekunle Olanrewaju
 * **GitHub Profile**: [@Adekunle-sec](https://github.com/Adekunle-sec)
 * **LinkedIn**: [adekunle-olanrewaju-20261844b](https://www.linkedin.com/in/adekunle-olanrewaju-20261844b)
-* **Email**: [contact@anlogix.com](mailto:contact@anlogix.com)
+* **Email**: [tayour.ola@gmail.com](mailto:tayour.ola@gmail.com)
