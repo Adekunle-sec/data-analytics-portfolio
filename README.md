@@ -98,6 +98,13 @@ flowchart TD
 
 ---
 
+## 📑 Evidence & Documentation Standards
+
+> [!NOTE]
+> **Confidentiality:** No real credentials, tokens, internal IPs, customer data, sensitive alerts, personal identifiers, or unapproved screenshots. Use synthetic or redacted evidence. Publish only materials approved for external sharing.
+
+---
+
 ## 👨‍💻 Author & Contact
 
 * **Lead Analyst**: Adekunle Olanrewaju
